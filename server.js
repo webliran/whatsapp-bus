@@ -30,7 +30,7 @@ client.on('message', async msg => {
             var responseBu = await fetch(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${places[key].place_id}&language=iw&key=AIzaSyCsIHF_gDTEL03aDYG4nygQxwsKgpbep1Y&fields=formatted_phone_number`);
             var buDate = await responseBu.json();
             console.log(buDate);
-            client.sendMessage(msg.from, "---------------------------------------------------");
+            client.sendMessage(msg.from, "-----------------------------------------------------");
             client.sendMessage(msg.from, name);
             client.sendMessage(msg.from, `טלפון: ${buDate.result.formatted_phone_number}`);
             client.sendMessage(msg.from, new Location(latitude, longitude, name));
